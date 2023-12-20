@@ -44,11 +44,15 @@ export const availableLocales: ILocales = {
 export function LanguageManager() {
   // composable
   const { locale } = useI18n()
+  console.log(useCookie)
+
   const localeUserSetting = useCookie('locale')
+  console.log(localeUserSetting.value)
 
   // methods
   const getSystemLocale = (): string => {
     try {
+      console.log(window.navigator.language)
       const foundLang = window
         ? window.navigator.language.substring(0, 2)
         : 'en'

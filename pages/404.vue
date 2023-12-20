@@ -14,7 +14,9 @@ useHead(() => ({
 </script>
 
 <template>
-  <PageWrapper class="flex flex-col items-center justify-center">
+  <!-- <PageWrapper class="flex flex-col items-center justify-center">
     <Error :code="404" />
-  </PageWrapper>
+    
+    </PageWrapper> -->
+  雀食不蟀
 </template>

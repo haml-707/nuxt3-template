@@ -53,6 +53,15 @@ export default defineNuxtConfig({
         ],
       }),
     ],
+    server: {
+      proxy: {
+        '/api-dsapi/': {
+          target: 'https://dsapi.osinfra.cn/',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api-dsapi/, ''),
+        },
+      },
+    },
   },
 
   // app config
